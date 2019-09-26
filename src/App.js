@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ReactFamilyTree from 'react-family-tree';
+import Person from './Person';
+import styles from './App.css'; // eslint-disable-line no-unused-vars
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import data from './data.json';
+const rootId = 'kuVISwh7w';
 
-export default App;
+const WIDTH = 70;
+const HEIGHT = 80;
+
+export default function App() {
+    return (
+      <div className='root'>
+          <ReactFamilyTree
+            nodes={data}
+            rootId={rootId}
+            width={WIDTH}
+            height={HEIGHT}
+            canvasClassName='tree'
+            renderNode={(node) => (
+              <Person
+                key={node.id}
+                node={node}
+                isRoot={node.id === rootId}
+                style={{
+                  width: WIDTH,
+                  height: HEIGHT,
+                  transform: `translate(${node.left * (WIDTH / 2)}px, ${node.top * (HEIGHT / 2)}px)`,
+                }}
+                handleClick={() => { console.log(node.id)}}
+              />
+            )}
+          />
+      </div>
+    );
+  }
