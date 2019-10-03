@@ -3,7 +3,7 @@ import ReactFamilyTree from 'react-family-tree';
 import Person from './Person';
 import styles from './App.css'; // eslint-disable-line no-unused-vars
 
-import data from './data.json';
+import data from './data_small.json';
 const rootId = 'kuVISwh7w';
 
 const WIDTH = 70;
@@ -29,6 +29,7 @@ export default function App() {
                   transform: `translate(${node.left * (WIDTH / 2)}px, ${node.top * (HEIGHT / 2)}px)`,
                 }}
                 handleClick={() => { console.log(node.id)}}
+                type={node.type}
               />
             )}
           />
