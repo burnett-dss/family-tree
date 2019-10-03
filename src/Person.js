@@ -17,7 +17,15 @@ export default function Person({ handleClick, isRoot, node, style }) {
         <div
           className={classNames(rootStyles)}
           onClick={handleClick}
-        />
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            textAlign: 'center'
+          }}
+        >
+          {node.type}
+        </div>
         {node.hasSubTree && (
           <div
             className={classNames('sub', node.gender)}
