@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactFamilyTree from 'react-family-tree';
 import Person from './Person';
+import InfoBox from './InfoBox';
 import styles from './App.css'; // eslint-disable-line no-unused-vars
 
 import data from './data_small.json';
@@ -10,6 +11,7 @@ const WIDTH = 70;
 const HEIGHT = 80;
 
 export default function App() {
+    const [info, setInfo] = useState(null);
     return (
       <div className='root'>
           <ReactFamilyTree
@@ -28,10 +30,13 @@ export default function App() {
                   height: HEIGHT,
                   transform: `translate(${node.left * (WIDTH / 2)}px, ${node.top * (HEIGHT / 2)}px)`,
                 }}
-                handleClick={() => { console.log(node.id)}}
+                handleClick={() => {/* show the node.bio in the info box */}}
                 type={node.type}
               />
             )}
+          />
+          <InfoBox
+            info={info}
           />
       </div>
     );

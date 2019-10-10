@@ -1,8 +1,12 @@
 .root {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 100%;
   }
+
+.info-box {
+  margin-left: 100px;
+}
 
   .header {
     display: flex;

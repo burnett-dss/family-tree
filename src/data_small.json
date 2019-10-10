@@ -28,7 +28,8 @@
                 "type": "blood"
             }
         ],
-        "spouses": []
+        "spouses": [],
+        "bio": "I'm you."
     },
     {
         "type": "D",
@@ -59,7 +60,8 @@
                 "id": "PXACjDxmR",
                 "type": "married"
             }
-        ]
+        ],
+        "bio": "I'm your dad."
     },
     {
         "type": "M",
@@ -90,7 +92,8 @@
                 "id": "011jVS4rb",
                 "type": "married"
             }
-        ]
+        ],
+        "bio": "I'm your mom."
     },
     {
         "type": "B",
@@ -121,7 +124,8 @@
             }
         ],
         "spouses": [],
-        "children": []
+        "children": [],
+        "bio": "I'm your brother."
     },
     {
         "type": "S",
@@ -152,7 +156,8 @@
             }
         ],
         "spouses": [],
-        "children": []
+        "children": [],
+        "bio": "I'm your sister."
     },
     {
         "type": "B",
@@ -183,6 +188,7 @@
                 "type": "blood"
             }
         ],
-        "spouses": []
+        "spouses": [],
+        "bio": "I'm your other brother."
     }
 ]
