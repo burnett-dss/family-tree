@@ -4,8 +4,8 @@ import Person from './Person';
 import InfoBox from './InfoBox';
 import styles from './App.css'; // eslint-disable-line no-unused-vars
 
-import data from './data_small.json';
-const rootId = 'kuVISwh7w';
+import data from './data_small';
+const rootId = 'Me';
 
 const WIDTH = 70;
 const HEIGHT = 80;
