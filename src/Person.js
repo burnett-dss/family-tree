@@ -16,7 +16,7 @@ export default function Person({ handleClick, isRoot, node, style }) {
             textAlign: 'center'
           }}
         >
-          {node.type}
+          {node.id}
         </div>
         {node.hasSubTree && (
           <div
