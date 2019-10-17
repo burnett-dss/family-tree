@@ -1,6 +1,6 @@
 let data = [
 
-    // This the object that represents you:
+    // This is the object that represents you:
 
     {
         id: "Me",
