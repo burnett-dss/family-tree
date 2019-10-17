@@ -4,7 +4,7 @@ import Person from './Person';
 import InfoBox from './InfoBox';
 import styles from './App.css'; // eslint-disable-line no-unused-vars
 
-import data from './data_small';
+import data from './example_data';
 const rootId = 'Me';
 
 const WIDTH = 70;

@@ -1,126 +1,111 @@
 let data = [
+
+    // This the object that represents you:
+
     {
-        label: "Y",
         id: "Me",
         gender: "male",
         parents: [
             {
                 id: "Dad",
-                type: "blood"
             },
             {
                 id: "Mom",
-                type: "blood"
             }
         ],
         children: [],
         sibling: [
             {
                 id: "John",
-                type: "blood"
             },
             {
                 id: "Susan",
-                type: "blood"
             },
             {
                 id: "Noel",
-                type: "blood"
             }
         ],
         spouses: [],
         bio: "I'm you."
     },
+
+    // The next two objects are your parents:
+
     {
-        label: "D",
         id: "Dad",
         gender: "male",
         parents: [],
         children: [
             {
                 id: "Me",
-                type: "blood"
             },
             {
                 id: "John",
-                type: "blood"
             },
             {
                 id: "Susan",
-                type: "blood"
             },
             {
                 id: "Noel",
-                type: "blood"
             }
         ],
         siblings: [],
         spouses: [
             {
                 id: "Mom",
-                type: "married"
             }
         ],
         bio: "I'm your dad."
     },
     {
-        label: "M",
         id: "Mom",
         gender: "female",
         parents: [],
         children: [
             {
                 id: "Me",
-                type: "blood"
             },
             {
                 id: "John",
-                type: "blood"
             },
             {
                 id: "Susan",
-                type: "blood"
             },
             {
                 id: "Noel",
-                type: "blood"
             }
         ],
         siblings: [],
         spouses: [
             {
                 id: "Dad",
-                type: "married"
             }
         ],
         bio: "I'm your mom."
     },
+
+    // These objects are your siblings:
+
     {
-        label: "B",
         id: "John",
         gender: "male",
         parents: [
             {
                 id: "Dad",
-                type: "blood"
             },
             {
                 id: "Mom",
-                type: "blood"
             }
         ],
         siblings: [
             {
                 id: "Me",
-                type: "blood"
             },
             {
                 id: "Susan",
-                type: "blood"
             },
             {
                 id: "Noel",
-                type: "blood"
             }
         ],
         spouses: [],
@@ -128,31 +113,25 @@ let data = [
         bio: "I'm your brother."
     },
     {
-        label: "S",
         id: "Susan",
         gender: "female",
         parents: [
             {
                 id: "Dad",
-                type: "blood"
             },
             {
                 id: "Mom",
-                type: "blood"
             }
         ],
         siblings: [
             {
                 id: "John",
-                type: "blood"
             },
             {
                 id: "Me",
-                type: "blood"
             },
             {
                 id: "Noel",
-                type: "blood"
             }
         ],
         spouses: [],
@@ -160,63 +139,51 @@ let data = [
         bio: "I'm your sister."
     },
     {
-        label: "B",
         id: "John",
         gender: "male",
         parents: [
             {
                 id: "Dad",
-                type: "blood"
             },
             {
                 id: "Mom",
-                type: "blood"
             }
         ],
         children: [],
         siblings: [
             {
                 id: "Noel",
-                type: "blood"
             },
             {
                 id: "Me",
-                type: "blood"
             },
             {
                 id: "Susan",
-                type: "blood"
             }
         ],
         spouses: [],
         bio: "I'm your other brother."
     },
     {
-        label: "B",
         id: "Noel",
         gender: "male",
         parents: [
             {
                 id: "Dad",
-                type: "blood"
             },
             {
                 id: "Mom",
-                type: "blood"
             }
         ],
         siblings: [
             {
                 id: "Me",
-                type: "blood"
             },
             {
                 id: "Susan",
-                type: "blood"
             },
             {
                 id: "John",
-                type: "blood"
             }
         ],
         spouses: [],
