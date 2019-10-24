@@ -1,195 +1,45 @@
+// This is the class and constructor used to create an object with a person's information.
+class PersonInfo {
+    constructor(id, gender, parents, children, siblings, spouses, bio) {
+        this.id = id;
+        this.gender = gender;
+
+        this.parents = [];
+        for (const parent of parents) {
+            this.parents.push({ id: parent });
+        }
+
+        this.children = [];
+        for (const child of children) {
+            this.children.push({ id: child });
+        }
+
+        this.siblings = [];
+        for (const sibling of siblings) {
+            this.siblings.push({ id: sibling });
+        }
+
+        this.spouses = [];
+        for (const spouse of spouses) {
+            this.spouses.push({ id: spouse });
+        }
+
+        this.bio = bio;
+    }
+}
+
 let data = [
+    // This is the object that represents you
+    new PersonInfo("Me", "male", ["Dad", "Mom"], [], ["John", "Susan", "Noel"], [], "This is me!"),
 
-    // This is the object that represents you:
+    // These two objects are your parents
+    new PersonInfo("Dad", "male", [], ["Me", "John", "Susan", "Noel"], [], ["Mom"], "I'm your dad."),
+    new PersonInfo("Mom", "female", [], ["Me", "John", "Susan", "Noel"], [], ["Dad"], "I'm your mom."),
 
-    {
-        id: "Me",
-        gender: "male",
-        parents: [
-            {
-                id: "Dad",
-            },
-            {
-                id: "Mom",
-            }
-        ],
-        children: [],
-        sibling: [
-            {
-                id: "John",
-            },
-            {
-                id: "Susan",
-            },
-            {
-                id: "Noel",
-            }
-        ],
-        spouses: [],
-        bio: "I'm you."
-    },
-
-    // The next two objects are your parents:
-
-    {
-        id: "Dad",
-        gender: "male",
-        parents: [],
-        children: [
-            {
-                id: "Me",
-            },
-            {
-                id: "John",
-            },
-            {
-                id: "Susan",
-            },
-            {
-                id: "Noel",
-            }
-        ],
-        siblings: [],
-        spouses: [
-            {
-                id: "Mom",
-            }
-        ],
-        bio: "I'm your dad."
-    },
-    {
-        id: "Mom",
-        gender: "female",
-        parents: [],
-        children: [
-            {
-                id: "Me",
-            },
-            {
-                id: "John",
-            },
-            {
-                id: "Susan",
-            },
-            {
-                id: "Noel",
-            }
-        ],
-        siblings: [],
-        spouses: [
-            {
-                id: "Dad",
-            }
-        ],
-        bio: "I'm your mom."
-    },
-
-    // These objects are your siblings:
-
-    {
-        id: "John",
-        gender: "male",
-        parents: [
-            {
-                id: "Dad",
-            },
-            {
-                id: "Mom",
-            }
-        ],
-        siblings: [
-            {
-                id: "Me",
-            },
-            {
-                id: "Susan",
-            },
-            {
-                id: "Noel",
-            }
-        ],
-        spouses: [],
-        children: [],
-        bio: "I'm your brother."
-    },
-    {
-        id: "Susan",
-        gender: "female",
-        parents: [
-            {
-                id: "Dad",
-            },
-            {
-                id: "Mom",
-            }
-        ],
-        siblings: [
-            {
-                id: "John",
-            },
-            {
-                id: "Me",
-            },
-            {
-                id: "Noel",
-            }
-        ],
-        spouses: [],
-        children: [],
-        bio: "I'm your sister."
-    },
-    {
-        id: "John",
-        gender: "male",
-        parents: [
-            {
-                id: "Dad",
-            },
-            {
-                id: "Mom",
-            }
-        ],
-        children: [],
-        siblings: [
-            {
-                id: "Noel",
-            },
-            {
-                id: "Me",
-            },
-            {
-                id: "Susan",
-            }
-        ],
-        spouses: [],
-        bio: "I'm your other brother."
-    },
-    {
-        id: "Noel",
-        gender: "male",
-        parents: [
-            {
-                id: "Dad",
-            },
-            {
-                id: "Mom",
-            }
-        ],
-        siblings: [
-            {
-                id: "Me",
-            },
-            {
-                id: "Susan",
-            },
-            {
-                id: "John",
-            }
-        ],
-        spouses: [],
-        children: [],
-        bio: "I'm your brother."
-    },
+    // These objects are your siblings
+    new PersonInfo("John", "male", ["Dad", "Mom"], [], ["Me", "Susan", "Noel"], [], "I'm your brother."),
+    new PersonInfo("Susan", "female", ["Dad", "Mom"], [], ["Me", "John", "Noel"], [], "I'm your sister."),
+    new PersonInfo("Noel", "male", ["Dad", "Mom"], [], ["Me", "Susan", "John"], [], "I'm your brother."),
 ];
 
 export default data;
