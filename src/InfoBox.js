@@ -1,9 +1,13 @@
 import React from 'react';
 
-export default function InfoBox({ info }) {
+class InfoBox extends React.Component {
+  render() {
     return(
-        <div className="info-box">
-            Use the info prop here.
-        </div>
+      <div className="info-box">
+        Use the info prop here.
+      </div>
     );
+  }
 }
+
+export default InfoBox;

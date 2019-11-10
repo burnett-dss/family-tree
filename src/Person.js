@@ -2,13 +2,16 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './Person.css'; // eslint-disable-line no-unused-vars
 
-export default function Person({ handleClick, isRoot, node, style }) {
-    const rootStyles = isRoot ? ['inner', node.gender, 'isRoot'] : ['inner', node.gender];
+class Person extends React.Component {
+  render() {
+    let rootStyles = this.props.isRoot ?
+        ['inner', this.props.node.gender, 'isRoot'] :
+        ['inner', this.props.node.gender];
     return (
-      <div className='root' style={style}>
+      <div className='root' style={this.props.style}>
         <div
           className={classNames(rootStyles)}
-          onClick={handleClick}
+          onClick={this.props.handleClick}
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -16,13 +19,16 @@ export default function Person({ handleClick, isRoot, node, style }) {
             textAlign: 'center'
           }}
         >
-          {node.id}
+          {this.props.node.id}
         </div>
-        {node.hasSubTree && (
+        {this.props.node.hasSubTree && (
           <div
-            className={classNames('sub', node.gender)}
+            className={classNames('sub', this.props.node.gender)}
           />
         )}
       </div>
     );
+  }
 }
+
+export default Person;

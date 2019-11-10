@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactFamilyTree from 'react-family-tree';
 import Person from './Person';
 import InfoBox from './InfoBox';
@@ -10,8 +10,16 @@ const rootId = 'Me';
 const WIDTH = 70;
 const HEIGHT = 80;
 
-export default function App() {
-    const [info, setInfo] = useState(null);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      info: null
+    }
+  }
+
+  render() {
     return (
       <div className='root'>
           <ReactFamilyTree
@@ -36,8 +44,11 @@ export default function App() {
             )}
           />
           <InfoBox
-            info={info}
+            info={this.state.info}
           />
       </div>
     );
   }
+}
+
+export default App;
