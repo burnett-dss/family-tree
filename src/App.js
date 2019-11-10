@@ -6,6 +6,7 @@ import styles from './App.css'; // eslint-disable-line no-unused-vars
 
 import data from './example_data';
 const rootId = 'Me';
+const familyNamesList = ["Me", "Dad", "Mom", "John", "Susan", "Noel"];
 
 const WIDTH = 70;
 const HEIGHT = 80;
@@ -49,6 +50,7 @@ class App extends React.Component {
             canvasClassName='tree'
             renderNode={(node) => this.renderPerson(node)} />
         <InfoBox
+            namesList={familyNamesList}
             info={this.state.info} />
       </div>
     );
