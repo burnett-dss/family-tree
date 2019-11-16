@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactFamilyTree from 'react-family-tree';
-import Person from './Person.jsx';
-import InfoBox from './InfoBox.jsx';
+import Person from './Person';
+import InfoBox from './InfoBox';
 import styles from './App.css'; // eslint-disable-line no-unused-vars
 
-import data from './example_data.js';
+import data from './example_data';
 const rootId = 'Me';
 const familyNamesList = ["Me", "Dad", "Mom", "John", "Susan", "Noel"];
 
