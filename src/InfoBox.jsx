@@ -1,5 +1,5 @@
 import React from 'react';
-import NamesList from './NamesList';
+import NamesList from './NamesList.jsx';
 
 class InfoBox extends React.Component {
   render() {
