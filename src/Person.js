@@ -2,27 +2,38 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './Person.css'; // eslint-disable-line no-unused-vars
 
-export default function Person({ handleClick, isRoot, node, style }) {
-    const rootStyles = isRoot ? ['inner', node.gender, 'isRoot'] : ['inner', node.gender];
+class Person extends React.Component {
+  renderSubTree(node) {
+    if (node.hasSubTree) {
+      return <div className={classNames('sub', node.gender)} />;
+    }
+  }
+
+  render() {
+    let rootStyles;
+    if (this.props.isRoot) {
+      rootStyles = ['inner', this.props.node.gender, 'isRoot'];
+    } else {
+      rootStyles = ['inner', this.props.node.gender];
+    }
+
     return (
-      <div className='root' style={style}>
+      <div className='root' style={this.props.style}>
         <div
-          className={classNames(rootStyles)}
-          onClick={handleClick}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            textAlign: 'center'
-          }}
-        >
-          {node.id}
+            className={classNames(rootStyles)}
+            onClick={() => this.props.handleClick()}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              textAlign: 'center'
+            }}>
+          {this.props.node.id}
         </div>
-        {node.hasSubTree && (
-          <div
-            className={classNames('sub', node.gender)}
-          />
-        )}
+        {this.renderSubTree(this.props.node)}
       </div>
     );
+  }
 }
+
+export default Person;
